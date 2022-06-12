@@ -18,7 +18,7 @@ class SignInCoordinator : BaseCoordinator {
         view.viewModelBuilder = {
             ViewModel(input: $0, router: self, service: FirebaseManager())
         }
-        
+        FirebaseManager.vc = view
         navigationController?.pushViewController(view, animated: true)
     }
 }

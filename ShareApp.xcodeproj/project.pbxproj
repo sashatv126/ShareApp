@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FD2CFFEE1945FE07D75118B /* Pods_ShareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE746230240DF858FBD0BD7 /* Pods_ShareApp.framework */; };
 		CA1CC57E2850EB8A00A2BA71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1CC57D2850EB8A00A2BA71 /* MainView.swift */; };
 		CA1CC5802850EBC400A2BA71 /* MainView + Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1CC57F2850EBC400A2BA71 /* MainView + Extension .swift */; };
 		CA1CC5842850ED6600A2BA71 /* UIKit + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1CC5832850ED6600A2BA71 /* UIKit + UILabel.swift */; };
@@ -43,11 +42,13 @@
 		CABEC7F82850E2CB00A9ED3A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABEC7F72850E2CB00A9ED3A /* SignInViewController.swift */; };
 		CABEC7FD2850E2CC00A9ED3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABEC7FC2850E2CC00A9ED3A /* Assets.xcassets */; };
 		CABEC8002850E2CC00A9ED3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABEC7FE2850E2CC00A9ED3A /* LaunchScreen.storyboard */; };
+		E7A1E1E82AC425386DD78F5D /* Pods_ShareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143790FEBEB3D45528384DB1 /* Pods_ShareApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F34F0B8AB990776329BEA62 /* Pods-ShareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareApp.release.xcconfig"; path = "Target Support Files/Pods-ShareApp/Pods-ShareApp.release.xcconfig"; sourceTree = "<group>"; };
-		7FE746230240DF858FBD0BD7 /* Pods_ShareApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		143790FEBEB3D45528384DB1 /* Pods_ShareApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B64B02B74CF9FD438BF9B2A /* Pods-ShareApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareApp.debug.xcconfig"; path = "Target Support Files/Pods-ShareApp/Pods-ShareApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A79C37117B49B29064ED9194 /* Pods-ShareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareApp.release.xcconfig"; path = "Target Support Files/Pods-ShareApp/Pods-ShareApp.release.xcconfig"; sourceTree = "<group>"; };
 		CA1CC57D2850EB8A00A2BA71 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CA1CC57F2850EBC400A2BA71 /* MainView + Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView + Extension .swift"; sourceTree = "<group>"; };
 		CA1CC5832850ED6600A2BA71 /* UIKit + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + UILabel.swift"; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		CABEC7FC2850E2CC00A9ED3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CABEC7FF2850E2CC00A9ED3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABEC8012850E2CC00A9ED3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E31B8065599CA955059C3EDC /* Pods-ShareApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareApp.debug.xcconfig"; path = "Target Support Files/Pods-ShareApp/Pods-ShareApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD2CFFEE1945FE07D75118B /* Pods_ShareApp.framework in Frameworks */,
+				E7A1E1E82AC425386DD78F5D /* Pods_ShareApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,10 +103,18 @@
 		535E0282597C95B996E91A6E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E31B8065599CA955059C3EDC /* Pods-ShareApp.debug.xcconfig */,
-				5F34F0B8AB990776329BEA62 /* Pods-ShareApp.release.xcconfig */,
+				9B64B02B74CF9FD438BF9B2A /* Pods-ShareApp.debug.xcconfig */,
+				A79C37117B49B29064ED9194 /* Pods-ShareApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		79DF9664419DC93124D057CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				143790FEBEB3D45528384DB1 /* Pods_ShareApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CA1CC57A2850EA0100A2BA71 /* View */ = {
@@ -228,7 +236,7 @@
 				CABEC7F22850E2CB00A9ED3A /* command */,
 				CABEC7F12850E2CB00A9ED3A /* Products */,
 				535E0282597C95B996E91A6E /* Pods */,
-				D04255099A70059E2E89CB62 /* Frameworks */,
+				79DF9664419DC93124D057CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -370,14 +378,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		D04255099A70059E2E89CB62 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7FE746230240DF858FBD0BD7 /* Pods_ShareApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,11 +385,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CABEC8042850E2CC00A9ED3A /* Build configuration list for PBXNativeTarget "ShareApp" */;
 			buildPhases = (
-				F48781E4EF9F7BE9B280911C /* [CP] Check Pods Manifest.lock */,
+				E9CD17FFF829E4844B9D4915 /* [CP] Check Pods Manifest.lock */,
 				CABEC7EC2850E2CB00A9ED3A /* Sources */,
 				CABEC7ED2850E2CB00A9ED3A /* Frameworks */,
 				CABEC7EE2850E2CB00A9ED3A /* Resources */,
-				CD9D672554E315BCA9183FA8 /* [CP] Embed Pods Frameworks */,
+				4015A54427B16A8B642F58D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,7 +447,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CD9D672554E315BCA9183FA8 /* [CP] Embed Pods Frameworks */ = {
+		4015A54427B16A8B642F58D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -464,7 +464,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareApp/Pods-ShareApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F48781E4EF9F7BE9B280911C /* [CP] Check Pods Manifest.lock */ = {
+		E9CD17FFF829E4844B9D4915 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -658,7 +658,7 @@
 		};
 		CABEC8052850E2CC00A9ED3A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E31B8065599CA955059C3EDC /* Pods-ShareApp.debug.xcconfig */;
+			baseConfigurationReference = 9B64B02B74CF9FD438BF9B2A /* Pods-ShareApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -686,7 +686,7 @@
 		};
 		CABEC8062850E2CC00A9ED3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F34F0B8AB990776329BEA62 /* Pods-ShareApp.release.xcconfig */;
+			baseConfigurationReference = A79C37117B49B29064ED9194 /* Pods-ShareApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -89,7 +89,15 @@ private extension ViewModel {
     func validGoogle(_ input : SignInInput) {
         let result = input.buttonGoogleTapped
             .share()
-        result.map{_ in }
+        result.map{_ in
+            self.service.loginWithGoogle { error in
+                if error == nil {
+                    self.router.pushToMain()
+                } else {
+                    print(error?.localizedDescription)
+                }
+            }
+        }
             .subscribe(googleSubject)
             .disposed(by: bag)
     }
