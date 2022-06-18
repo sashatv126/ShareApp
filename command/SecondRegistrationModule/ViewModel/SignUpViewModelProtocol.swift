@@ -6,7 +6,6 @@ struct SignUpInput {
     let password : Observable<String>
     let repeatPassword : Observable<String>
     let buttonRegisterTapped : Observable<Void>
-    
 }
 
 struct SignUpOutput {
@@ -20,7 +19,6 @@ protocol SignUpViewModelProtocol {
     typealias ViewModelBuilder = (SignUpInput) -> SignUpViewModelProtocol
     
     var input : SignUpInput { get set }
-    var output : SignUpOutput? { get set }
     
     func transform(_ input : SignUpInput) -> SignUpOutput
 }

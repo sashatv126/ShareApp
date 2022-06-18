@@ -3,7 +3,6 @@ import RxSwift
 import RxCocoa
 
 class MainView : UIView {
-    
 //MARK: -CreateUI
     lazy var welcomeLabel = createWelcomeLabel()
     lazy var loginLabel = createLoginLabel()

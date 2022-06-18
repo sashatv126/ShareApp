@@ -128,6 +128,7 @@ PODS:
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
+  - SideMenu (6.5.0)
 
 DEPENDENCIES:
   - Firebase/Core
@@ -138,6 +139,7 @@ DEPENDENCIES:
   - RxDataSources (~> 5.0)
   - RxSwift (~> 6.5.0)
   - SDWebImage
+  - SideMenu
 
 SPEC REPOS:
   trunk:
@@ -165,6 +167,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SDWebImage
+    - SideMenu
 
 SPEC CHECKSUMS:
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
@@ -191,7 +194,8 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: bde3bff0d79a728d68036097bdd95b1f0bd8b598
+PODFILE CHECKSUM: 561465fe81fb05731888df2738147c8a4b62701d
 
 COCOAPODS: 1.11.3

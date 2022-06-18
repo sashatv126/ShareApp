@@ -3,11 +3,8 @@ import RxCocoa
 import RxRelay
 
 final class ViewModel : ViewModelProtocol {
-    func signResult() {
-    }
-    
+
     var input: SignInInput
-    var output: SignInOutput?
     
     private let bag = DisposeBag()
     
@@ -94,7 +91,7 @@ private extension ViewModel {
                 if error == nil {
                     self.router.pushToMain()
                 } else {
-                    print(error?.localizedDescription)
+                    return
                 }
             }
         }

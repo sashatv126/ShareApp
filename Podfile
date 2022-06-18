@@ -12,8 +12,7 @@ pod 'FirebaseAuth'
 pod 'Firebase/Database'
 pod 'Firebase/Core'
 pod 'GoogleSignIn'
-
-
+pod 'SideMenu'
 pod 'SDWebImage'
 
 end

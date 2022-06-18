@@ -16,7 +16,7 @@ class AppMainCoordinator: BaseCoordinator {
 //create new window for start application
     override func start() {
         
-        let mainCoordinator = MainViewCoordinator(navigationController: navigationController)
+        let mainCoordinator = TabCoordinator(navigationController)
         self.add(coordinator: mainCoordinator)
         
         mainCoordinator.start()

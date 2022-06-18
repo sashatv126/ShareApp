@@ -3,15 +3,19 @@ import FirebaseDatabase
 import GoogleSignIn
 
 protocol FirebaseService {
-        
+    
     func auth(email : String, password : String, _ completion : @escaping (Error?) -> ())
+    
     func register(email : String, password : String)
     
+    func logOut()
+    
     func loginWithGoogle(completion : @escaping (Error?) -> ())
+    
 }
 
 class FirebaseManager : FirebaseService {
-        
+    
     static var vc : UIViewController = UIViewController()
     
     func register(email: String, password: String) {
@@ -66,6 +70,14 @@ class FirebaseManager : FirebaseService {
                 completion(nil)
                 print(user.displayName!)
             }
+        }
+    }
+    
+    func logOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }

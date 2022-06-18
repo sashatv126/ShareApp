@@ -20,8 +20,6 @@ protocol ViewModelProtocol {
     typealias ViewModelBuilder = (SignInInput) -> ViewModelProtocol
     
     var input : SignInInput { get set }
-    var output : SignInOutput? { get set }
     
-    func signResult()
     func transform(_ input : SignInInput) -> SignInOutput
 }

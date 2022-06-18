@@ -4,7 +4,6 @@ import RxCocoa
 class SignUpViewModel : SignUpViewModelProtocol {
     
     var input: SignUpInput
-    var output: SignUpOutput?
     
     private let bag = DisposeBag()
     
