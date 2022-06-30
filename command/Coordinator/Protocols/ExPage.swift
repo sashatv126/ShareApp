@@ -19,11 +19,11 @@ enum TabBarPage {
     func pageTitleValue() -> String {
         switch self {
         case .ready:
-            return "News"
+            return "Love"
         case .steady:
-            return "Pictures"
-        case .go:
             return "Camera"
+        case .go:
+            return "picture"
         }
     }
 
@@ -41,11 +41,11 @@ enum TabBarPage {
     func pageImage() -> String? {
         switch self {
         case .ready:
-            return "news"
+            return "love"
         case .steady:
-            return "pict"
-        case .go:
             return "camera"
+        case .go:
+            return "picture"
         }
     }
 }

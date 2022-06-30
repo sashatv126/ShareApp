@@ -7,9 +7,9 @@ class MenuViewController : UIViewController {
     
     private lazy var buttonMenu : UIButton = {
         let button = UIButton(title: "Sign out",
-                              titleColor: .black,
-                              backGroundColor: .gray,
-                              fornt: UIFont.systemFont(ofSize: 25),
+                              titleColor: .white,
+                              backGroundColor: .systemBlue,
+                              fornt: UIFont.systemFont(ofSize: 18),
                               isShadow: true,
                               cornerRadus: 10)
         return button
@@ -23,14 +23,12 @@ class MenuViewController : UIViewController {
     private lazy var datasource = RxTableViewSectionedReloadDataSource<CellSections>(configureCell: { _,tableView,indexPth,item  in
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuViewController.cellId, for: indexPth)
-        cell.backgroundColor = .gray
+        cell.backgroundColor = UIColor(red: 14/255.0,
+                                       green: 15/255.0,
+                                       blue: 13/255.0,
+                                       alpha: 1.0)
         cell.textLabel?.text = item.title
-        cell.selectedBackgroundView?.layer.cornerRadius = 20
-        cell.layer.cornerRadius = 20
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowRadius = 4
-        cell.layer.shadowOpacity = 0.5
-        cell.layer.shadowOffset = CGSize(width: 0, height: 4)
+        cell.textLabel?.textColor = .white
         cell.imageView?.image = UIImage(systemName: "plus")
         return cell 
     } )
@@ -75,10 +73,16 @@ private extension MenuViewController {
     func setupConstraints() {
         self.tableView.register(UITableViewCell.self,
                                 forCellReuseIdentifier: MenuViewController.cellId)
-        tableView.backgroundColor = .gray
+        tableView.backgroundColor = UIColor(red: 14/255.0,
+                                            green: 15/255.0,
+                                            blue: 13/255.0,
+                                            alpha: 1.0)
         tableView.isScrollEnabled = false
         tableView.rowHeight = 60
-        tableView.separatorColor = .gray
+        tableView.separatorColor = UIColor(red: 14/255.0,
+                                           green: 15/255.0,
+                                           blue: 13/255.0,
+                                           alpha: 1.0)
         view.addSubview(tableView)
         tableView.addSubview(buttonMenu)
         buttonMenu.translatesAutoresizingMaskIntoConstraints = false
@@ -93,7 +97,7 @@ private extension MenuViewController {
         
         NSLayoutConstraint.activate([
             buttonMenu.leadingAnchor.constraint(equalTo: tableView.leadingAnchor,constant: 15),
-            buttonMenu.centerYAnchor.constraint(equalTo: tableView.centerYAnchor,constant: 200),
+            buttonMenu.centerYAnchor.constraint(equalTo: tableView.centerYAnchor,constant: 270),
             buttonMenu.widthAnchor.constraint(equalToConstant: 200),
             buttonMenu.heightAnchor.constraint(equalToConstant: 50)
         ])

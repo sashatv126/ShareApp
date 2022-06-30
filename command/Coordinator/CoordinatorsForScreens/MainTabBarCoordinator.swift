@@ -41,13 +41,16 @@ class TabCoordinator: NSObject, Coordinator {
         tabBarController.setViewControllers(tabControllers, animated: true)
         tabBarController.selectedIndex = TabBarPage.ready.pageOrderNumber()
         navigationController.isNavigationBarHidden = false
+        navigationController.navigationBar.backgroundColor = .white
         navigationController.viewControllers = [tabBarController]
+        
     }
     
     private func getTabController(_ page: TabBarPage) -> UINavigationController {
         let navController = UINavigationController()
         
         navController.tabBarItem = UITabBarItem(title: page.pageTitleValue(), image: UIImage(named: page.pageImage() ?? "")?.withRenderingMode(.alwaysOriginal), tag: page.pageOrderNumber())
+        navController.isNavigationBarHidden = true
         
         switch page {
         case .ready:
@@ -55,13 +58,13 @@ class TabCoordinator: NSObject, Coordinator {
             
             navController.pushViewController(vc1, animated: true)
         case .steady:
+            let vc3 = CameraView()
+            
+            navController.pushViewController(vc3, animated: true)
+        case .go:
             let vc2 = MainViewController()
             
             navController.pushViewController(vc2, animated: true)
-        case .go:
-            let vc3 = MenuViewController()
-            
-            navController.pushViewController(vc3, animated: true)
         }
         
         return navController

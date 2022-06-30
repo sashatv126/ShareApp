@@ -17,15 +17,18 @@ class CustomTabBar : UITabBarController {
 
 private extension CustomTabBar {
     func set() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "menu", style: .done, target: self, action: #selector(tap))
-        
-        
+        let menuButton = UIButton(type: .system)
+        menuButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        let menu = UIBarButtonItem(customView: menuButton)
+        menuButton.tintColor = .black
+        menuButton.setImage(UIImage(named: "menu"), for: .normal)
+        menu.image = UIImage(named: "menu")
+        menu.style = .done
+        navigationItem.leftBarButtonItem = menu
     }
     
     @objc
     private func tap() {
         present(menu!, animated: true, completion: nil)
     }
-    
-    
 }

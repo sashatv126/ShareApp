@@ -22,6 +22,10 @@
 		CA1CC59D2851124300A2BA71 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1CC59C2851124300A2BA71 /* BaseCoordinator.swift */; };
 		CA1CC5A12851142700A2BA71 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1CC5A02851142700A2BA71 /* SignInCoordinator.swift */; };
 		CA1CC5A32851170800A2BA71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1CC5A22851170800A2BA71 /* User.swift */; };
+		CA41F579286C8ECF00968E61 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F578286C8ECF00968E61 /* CameraManager.swift */; };
+		CA41F57B286C9F8400968E61 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F57A286C9F8400968E61 /* CameraView.swift */; };
+		CA41F581286DD6C700968E61 /* CameraViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F580286DD6C700968E61 /* CameraViewModelProtocol.swift */; };
+		CA41F583286DD75900968E61 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F582286DD75900968E61 /* CameraViewModel.swift */; };
 		CA4BAE1728536E8B00A2FEEE /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4BAE1628536E8B00A2FEEE /* SignUpCoordinator.swift */; };
 		CA4BAE19285372A300A2FEEE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4BAE18285372A300A2FEEE /* SignUpViewController.swift */; };
 		CA4BAE1B28537E9000A2FEEE /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4BAE1A28537E9000A2FEEE /* Routable.swift */; };
@@ -76,6 +80,10 @@
 		CA1CC59C2851124300A2BA71 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		CA1CC5A02851142700A2BA71 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		CA1CC5A22851170800A2BA71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA41F578286C8ECF00968E61 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		CA41F57A286C9F8400968E61 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		CA41F580286DD6C700968E61 /* CameraViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModelProtocol.swift; sourceTree = "<group>"; };
+		CA41F582286DD75900968E61 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		CA4BAE1628536E8B00A2FEEE /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		CA4BAE18285372A300A2FEEE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CA4BAE1A28537E9000A2FEEE /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
@@ -198,6 +206,39 @@
 			path = "Extension + Views";
 			sourceTree = "<group>";
 		};
+		CA41F577286C8EB200968E61 /* CameraService */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F578286C8ECF00968E61 /* CameraManager.swift */,
+			);
+			path = CameraService;
+			sourceTree = "<group>";
+		};
+		CA41F57C286DD66D00968E61 /* CameraModule */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F57E286DD68400968E61 /* CameraViewModel */,
+				CA41F57D286DD67D00968E61 /* CameraView */,
+			);
+			path = CameraModule;
+			sourceTree = "<group>";
+		};
+		CA41F57D286DD67D00968E61 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		CA41F57E286DD68400968E61 /* CameraViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F580286DD6C700968E61 /* CameraViewModelProtocol.swift */,
+				CA41F582286DD75900968E61 /* CameraViewModel.swift */,
+			);
+			path = CameraViewModel;
+			sourceTree = "<group>";
+		};
 		CA561B0C28585F590084F849 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +286,7 @@
 		CA65D3EF2854D030001E9C5F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CA41F577286C8EB200968E61 /* CameraService */,
 				CA65D3F02854D037001E9C5F /* Firebase */,
 			);
 			path = Service;
@@ -315,6 +357,7 @@
 		CABEC7F22850E2CB00A9ED3A /* command */ = {
 			isa = PBXGroup;
 			children = (
+				CA41F57C286DD66D00968E61 /* CameraModule */,
 				CAEB6D10285D98B7007D8371 /* Constants */,
 				CA561B0D2858603C0084F849 /* BurgerMenuModel */,
 				CA65D3F328551285001E9C5F /* MainModule */,
@@ -325,6 +368,7 @@
 				CABEC8092850E8AC00A9ED3A /* SecondRegistrationModule */,
 				CABEC8082850E89F00A9ED3A /* MainAuthModule */,
 				CABEC8072850E89600A9ED3A /* Coordinator */,
+				CA41F57A286C9F8400968E61 /* CameraView.swift */,
 			);
 			path = command;
 			sourceTree = "<group>";
@@ -566,6 +610,7 @@
 				CABEC7F82850E2CB00A9ED3A /* SignInViewController.swift in Sources */,
 				CA1CC59B2851123000A2BA71 /* Coordinator.swift in Sources */,
 				CA6ACD7C2857D04200E5EE68 /* MainView + Extension.swift in Sources */,
+				CA41F583286DD75900968E61 /* CameraViewModel.swift in Sources */,
 				CA1CC58A2850F00000A2BA71 /* UIKit + UIImageView.swift in Sources */,
 				CA1CC5A12851142700A2BA71 /* SignInCoordinator.swift in Sources */,
 				CA65D3E6285476D9001E9C5F /* SignUp + Extension.swift in Sources */,
@@ -595,13 +640,16 @@
 				CABEC7F62850E2CB00A9ED3A /* SceneDelegate.swift in Sources */,
 				CA561B0B28585F4F0084F849 /* Model.swift in Sources */,
 				CA1CC5972851078200A2BA71 /* Button.swift in Sources */,
+				CA41F579286C8ECF00968E61 /* CameraManager.swift in Sources */,
 				CA4BAE1728536E8B00A2FEEE /* SignUpCoordinator.swift in Sources */,
 				CA65D3FA2855132A001E9C5F /* MainViewCoordinator.swift in Sources */,
 				CA6ACD802857DF8E00E5EE68 /* ExPage.swift in Sources */,
 				CAEB6D14285D9A93007D8371 /* MainViewModel.swift in Sources */,
 				CA561B192858701D0084F849 /* MenuViewModelProtocol.swift in Sources */,
 				CA1CC5842850ED6600A2BA71 /* UIKit + UILabel.swift in Sources */,
+				CA41F57B286C9F8400968E61 /* CameraView.swift in Sources */,
 				CA65D3FC28552FD3001E9C5F /* AppMainCoordinator.swift in Sources */,
+				CA41F581286DD6C700968E61 /* CameraViewModelProtocol.swift in Sources */,
 				CA1CC59D2851124300A2BA71 /* BaseCoordinator.swift in Sources */,
 				CA561B152858693F0084F849 /* CellViewModel.swift in Sources */,
 				CA1CC5A32851170800A2BA71 /* User.swift in Sources */,

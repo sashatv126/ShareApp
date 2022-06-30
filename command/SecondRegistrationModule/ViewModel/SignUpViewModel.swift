@@ -67,6 +67,7 @@ private extension SignUpViewModel {
             .withLatestFrom(Observable.combineLatest(input.email,
                                                      input.password,
                                                      input.repeatPassword))
+        
             .share()
         result.map({[weak self] (email, password, _) in
             guard let self = self else { return }
